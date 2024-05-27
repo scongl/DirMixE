@@ -182,8 +182,8 @@ If you find our work inspiring or use our codebase in your research, please cite
 
 ```
 @inproceedings{yang2024harnessing,
-	title={Harnessing Hierarchical Label Distribution Variations in Test Agnostic Long-tail Recognition}, 
-	author={Zhiyong Yang and Qianqian Xu and Zitai Wang and Sicong Li and Boyu Han and Shilong Bao and Xiaochun Cao and Qingming Huang},
+    title={Harnessing Hierarchical Label Distribution Variations in Test Agnostic Long-tail Recognition}, 
+    author={Zhiyong Yang and Qianqian Xu and Zitai Wang and Sicong Li and Boyu Han and Shilong Bao and Xiaochun Cao and Qingming Huang},
     booktitle={International Conference on Machine Learning},
     year={2024}
 }
