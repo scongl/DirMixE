@@ -1,0 +1,63 @@
+{
+    "name": "iNaturalist_ResNet50_OURS",
+    "n_gpu": 4,
+    "arch": {
+        "type": "ResNet50Model",
+        "args": {
+            "num_classes": 8142,
+            "reduce_dimension": true,
+            "use_norm": true,
+            "returns_feat": true,
+            "num_experts": 3
+        }
+    },
+    "data_loader": {
+        "type": "iNaturalistDataLoader",
+        "args": {
+            "data_dir": "./data/iNaturalist",
+            "batch_size": 512,
+            "shuffle": true,
+            "num_workers": 16
+        }
+    },
+    "optimizer": {
+        "type": "SGD",
+        "args": {
+            "lr": 0.2,
+            "weight_decay": 0.0002,
+            "momentum": 0.9,
+            "nesterov": true
+        }
+    },
+    "add_extra_info": true,
+    "loss": {
+        "type": "LogitAdjustExpertLoss",
+        "args": {
+            "loss_type": "LA",
+            "lambda_var": 1.0,
+            "power": 1.3,
+            "dataset_type": "iNaturalist",
+            "alpha_sum": 100000
+        }
+    },
+    "metrics": [
+        "accuracy"
+    ],
+    "lr_scheduler": {
+        "type": "CustomLR",
+        "args": {
+            "step1": 60,
+            "step2": 80,
+            "gamma": 0.1,
+            "warmup_epoch": 5
+        }
+    },
+    "trainer": {
+        "epochs": 100,
+        "save_dir": "saved/inaturalist",
+        "save_period": 100,
+        "verbosity": 2,
+        "monitor": "max val_accuracy",
+        "tensorboard": false
+    }
+}
