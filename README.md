@@ -2,8 +2,11 @@
 
 This repository is the official code for the paper [Harnessing Hierarchical Label Distribution Variations in Test Agnostic Long-tail Recognition](https://arxiv.org/abs/2405.07780) (ICML 2024).
 
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2405.07780) [![video](https://img.shields.io/badge/Video-Presentation-F9D371)](https://github.com/scongl/DirMixE) [![slides](https://img.shields.io/badge/Presentation-Slides-B762C1)](https://github.com/scongl/DirMixE) [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://github.com/scongl/DirMixE)
 
+**Paper Title: Harnessing Hierarchical Label Distribution Variations in Test Agnostic Long-tail Recognition.**
 
+**Author: [Zhiyong Yang](https://joshuaas.github.io/), [Qianqian Xu*](https://qianqianxu010.github.io/), [Zitai Wang](https://wang22ti.com/), Sicong Li, Boyu Han, [Shilong Bao](https://statusrank.github.io/), [Xiaochun Cao](https://scst.sysu.edu.cn/members/1401493.htm), [Qingming Huang*](https://people.ucas.ac.cn/~qmhuang)**
 
 ![key_idea](figs/key_idea.png)
 
