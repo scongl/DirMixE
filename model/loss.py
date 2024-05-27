@@ -149,7 +149,7 @@ class RIDELoss(nn.Module):
                 effective_num = 1.0 - np.power(betas[idx], cls_num_list)
                 per_cls_weights = (1.0 - betas[idx]) / np.array(effective_num)
                 per_cls_weights = per_cls_weights / np.sum(per_cls_weights) * len(cls_num_list)
-                self.per_cls_weights_enabled = torch.tensor(per_cls_weights, dtype=torch.float, requires_grad=False)   # 这个是logits时算CE loss的weight
+                self.per_cls_weights_enabled = torch.tensor(per_cls_weights, dtype=torch.float, requires_grad=False)
             else:
                 self.per_cls_weights_enabled = None
 
@@ -163,7 +163,7 @@ class RIDELoss(nn.Module):
 
             assert np.all(per_cls_weights > 0), "reweight factor is too large: out of bounds"
             # save diversity per_cls_weights
-            self.per_cls_weights_enabled_diversity = torch.tensor(per_cls_weights, dtype=torch.float, requires_grad=False).cuda()  # 这个是logits时算diversity loss的weight
+            self.per_cls_weights_enabled_diversity = torch.tensor(per_cls_weights, dtype=torch.float, requires_grad=False).cuda()
 
         self.base_diversity_temperature = base_diversity_temperature
         self.additional_diversity_factor = additional_diversity_factor

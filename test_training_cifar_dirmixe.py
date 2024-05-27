@@ -317,8 +317,6 @@ class LogitAdjustExpertLoss(nn.Module):
         self.loss = nn.CrossEntropyLoss()
                                    
     def forward(self, output_logits, target):
-        # 将w转化为tensor
-        # w = torch.tensor(w).float().cuda()
         pi_ratio = self.weights ** self.power / self.prior ** self.power
         score = output_logits - torch.log(pi_ratio + 1e-9)
         
@@ -454,25 +452,15 @@ def main(config, args):
     print('\n')        
     print('='*25, ' Final results ', '='*25)
     print('\n')
-    # i = 0
     print('Top-1 accuracy on many-shot, medium-shot, few-shot, mean classes and all classes:')
-    # for txt in performance_record_list:
-    #     print(test_distribution_set[i]+'\t')
-    #     print(*txt)          
-    #     i+=1  
         
     for i in range(trials):
         idx = idx_list[i]
         print(test_distribution_set[idx] + '\t')
         print(*performance_record_list[i])      
         
-    # i=0
     print('\n')
-    print('Aggregation weights of three experts:')    
-    # for txt1 in weight_record_list:
-    #     print(test_distribution_set[i]+'\t')
-    #     print(*txt1)          
-    #     i+=1                 
+    print('Aggregation weights of three experts:')                  
         
     for i in range(trials):
         idx = idx_list[i]
