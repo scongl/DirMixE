@@ -3,6 +3,8 @@
 This repository is the official code for the paper [Harnessing Hierarchical Label Distribution Variations in Test Agnostic Long-tail Recognition](https://arxiv.org/abs/2405.07780) (ICML 2024).
 
 
+
+
 ![key_idea](figs/key_idea.png)
 
 
