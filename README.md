@@ -22,6 +22,12 @@ This repository is the official code for the paper [Harnessing Hierarchical Labe
 ![key_idea](figs/key_idea.png)
 
 
+## 🔥 News
+
+- **[2026]** Our work has been further extended in a **TPAMI version** with improved methodology and more comprehensive experiments.  
+  👉 Please check the new repository: https://github.com/scongl/DirMixE_TPAMI
+
+
 ## Installation
 
 * Clone the repository
@@ -200,6 +206,13 @@ If you find our work inspiring or use our codebase in your research, please cite
     author={Zhiyong Yang and Qianqian Xu and Zitai Wang and Sicong Li and Boyu Han and Shilong Bao and Xiaochun Cao and Qingming Huang},
     booktitle={International Conference on Machine Learning},
     year={2024}
+}
+
+@article{yang2026dirmixe,
+    title = {DirMixE: Harnessing Test Agnostic Long-tail Recognition with Hierarchical Label Vartiations},
+    author = {Zhiyong Yang and Qianqian Xu and Sicong Li and Zitai Wang and Xiaochun Cao and Qingming Huang},
+    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    year = {2026},
 }
 ```
 
